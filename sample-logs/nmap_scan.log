@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-01-30T12:34:56Z",
+  "host": "kali-vm",
+  "ip": "192.168.1.10",
+  "event": {
+    "action": "nmap_scan",
+    "category": "network",
+    "outcome": "success"
+  },
+  "network": {
+    "protocol": "TCP",
+    "port": [22, 80, 443, 3389],
+    "service": ["SSH", "HTTP", "HTTPS", "RDP"]
+  },
+  "process": {
+    "name": "nmap",
+    "args": "-sS -p 22,80,443,3389 192.168.1.1"
+  },
+  "message": "Nmap scan detected open ports on the target system."
+}
