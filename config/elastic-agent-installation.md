@@ -49,3 +49,19 @@ Before installing the Elastic Agent, ensure the following:
 2. Look for logs from your Kali VM under `agent.name:"kali-linux"`.
 3. If logs are appearing, your agent is successfully forwarding data.
 
+## Troubleshooting
+- **Issue: Installation fails due to missing dependencies**
+  - Run:
+    ```bash
+    sudo apt update && sudo apt install -y curl tar
+    ```
+    Then retry the installation command.
+- **Issue: No logs appearing in Kibana**
+  - Ensure the agent is running:
+    ```bash
+    sudo systemctl status elastic-agent.service
+    ```
+  - Restart the agent:
+    ```bash
+    sudo systemctl restart elastic-agent
+    ```
